@@ -1,6 +1,5 @@
-
 /*
-* Unique characters check: 
+* Unique characters check:
  */
 
 use std::env;
@@ -17,12 +16,16 @@ fn unique_chars(s: &str) -> bool {
 
 fn main() -> () {
     let args: Vec<String> = env::args().collect();
-    let sentence = args[0];
 
-    match unique_chars(sentence.as_slice()) {
+    match args.len {
+        1 => {
+            println!("No string argument to check is passed in, Please pass some arguments.")
+        }
+    }
+    let sentence = args[1];
+
+    match unique_chars(sentence) {
         true => println!("String contains only unique characters"),
         false => println!("String doesn't contain only unique characters")
     }
 }
-
-
