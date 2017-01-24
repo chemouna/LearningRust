@@ -20,3 +20,4 @@ fn test_all_unique_chars() {
     assert!(all_unique_chars("abcdefg"));
     assert!(all_unique_chars("aaa"))
 }
+
