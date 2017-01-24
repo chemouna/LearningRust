@@ -58,4 +58,16 @@ impl<T> Queue<T> {
             h.elem
         })
     }
+
+    pub fn peek(&self) -> Option<&T> {
+        return self.head.as_ref().map(|item| {
+            &item.elem
+        })
+    }
+
+    pub fn peek_mut(&mut self) -> Option<&mut T> {
+        return self.head.as_mut().map(|item| {
+            &mut item.elem
+        })
+    }
 }
